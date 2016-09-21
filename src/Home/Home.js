@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router';
 
 class Home extends React.Component {
   render () {
@@ -6,6 +7,7 @@ class Home extends React.Component {
       contentHome:{
         backgroundImage:'url(http://odowb0dhc.bkt.clouddn.com/21.jpg)',
         backgroundSize:'cover',
+        backgroundPosition:"50% 50%",
         flexGrow:'1',
         color:'#fff',
         textAlign:'center'
@@ -30,7 +32,6 @@ class Home extends React.Component {
         color:'#fff',
         width:'100px',
         height:'36px',
-        backgroundColor:'#FF4081',
         textDecoration:'none',
         textAlign:'center',
         lineHeight:'36px',
@@ -44,10 +45,9 @@ class Home extends React.Component {
           <div className='home-inner' style={styles.inner}>
             <h1 style={styles.h1}>HI,I'M <span style={styles.span}>MENGMENG</span></h1>
             <p>WEB DEVELOPER</p>
-            <a style={styles.a} className='home-active'>HIRE ME</a>
+            <Link to='/about' style={styles.a} className='home-active'>HIRE ME</Link>
           </div>
         </div>
-
       </div>
     )
   }
