@@ -63,6 +63,13 @@
 .home-active:hover{
   background-color: #00BCD4;
 }
+.blogBtn{
+  color:#FF4081;
+}
+.blogBtn:hover{
+  background-color: #FF4081;
+  color:#fff;
+}
 @media(min-width:760px){
   .content-wrap{
     flex-direction: row;

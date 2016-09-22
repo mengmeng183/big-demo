@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkCard from '../components/workCard';
+import WorkCard from '../components/WorkCard';
 import {getWorkCard} from '../utils/helpers.js';
 
 class Work extends React.Component {

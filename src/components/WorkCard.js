@@ -10,9 +10,9 @@ class WorkCard extends React.Component {
             <h3>{this.props.title}</h3>
             <p>{this.props.desc}</p>
             <p>
-              <a to='/about' className="btn btn-primary" role="button">Button</a>
-              <a href="#" className="btn btn-default" role="button">Button</a>
-              
+              <a to='/about' className="btn btn-primary" role="button" style={{marginRight:'10px'}}>查看详情</a>
+              <a href="#" className="btn btn-default" role="button">返回</a>
+
               </p>
           </div>
         </div>
