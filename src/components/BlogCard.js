@@ -23,7 +23,7 @@ class BlogCard extends React.Component {
         width:'60px',
         heigth:'60px',
         color:"#fff",
-        fontSize:"20px",
+        fontSize:"24px",
         border:'2px solid #fff',
         borderRadius:'50%',
         textAlign:'center',
@@ -46,19 +46,27 @@ class BlogCard extends React.Component {
         textDecoration:'none',
       }
     }
+    let address=`item/${this.props.url}`
     return(
       <div style={styles.root}>
         <div style={styles.indexBox}>
-          <span style={styles.index}>1</span>
+          <span style={styles.index}>{this.props.index+1}</span>
         </div>
         <div style={{padding:'10px 10px 30px 10px'}}>
-          <p style={styles.title}>我是标题</p>
-          <p style={styles.desc}>我是内容</p>
-          <a style={styles.btn} className='blogBtn'>阅读更多</a>
+          <p style={styles.title}>{this.props.title}</p>
+          <p style={styles.desc}>{this.props.desc}</p>
+          <Link to={address} style={styles.btn} className='blogBtn'>阅读更多</Link>
         </div>
       </div>
     )
   }
 }
-
+BlogCard.propTypes={
+  title:React.PropTypes.string.isRequired,
+  desc:React.PropTypes.string.isRequired
+}
+BlogCard.defaultProps={
+  title:'这是标题',
+  desc:'这里是介绍'
+}
 export default BlogCard;

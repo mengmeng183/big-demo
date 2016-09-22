@@ -10,4 +10,15 @@ function getWorkCard(){
       alert(error);
     });
 }
-export {getWorkCard};
+
+function getBlogCard(){
+  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/BlogCard.json`
+  return axios.get(address)
+    .then((res) => (
+      { getData:res.data }
+    ))
+    .catch(function (error) {
+      alert(error);
+    });
+}
+export {getWorkCard,getBlogCard};
