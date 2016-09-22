@@ -12,7 +12,7 @@ class App extends React.Component {
     }
   }
   setNavBarState(){
-    this.setState({navLeftShow : window.innerWidth>760 ? true : false})
+    this.setState({navLeftShow : window.innerWidth > 760 ? true : false})
   }
   componentDidMount(){
     this.setNavBarState()

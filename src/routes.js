@@ -1,12 +1,13 @@
 import React from 'react';
 import {Router,Route,hashHistory,IndexRoute} from 'react-router';
+
 import App from './App.js';
 import Home from './Home/Home';
 import Blog from './Blog/Blog';
 import Work from './Work/Work';
 import About from './About/About';
-import Item from './Item/Item';
-
+import BlogInfo from './BlogInfo/BlogInfo';
+import WorkInfo from './WorkInfo/WorkInfo';
 
 class Routes extends React.Component {
   render () {
@@ -17,8 +18,8 @@ class Routes extends React.Component {
           <Route path='/work' component={Work} />
           <Route path='/blog' component={Blog} />
           <Route path='/about' component={About} />
-          <Route path='/Item/:url' component={Item} />
-
+          <Route path='/bloginfo/:url' component={BlogInfo} />
+          <Route path='/workinfo/:add' component={WorkInfo} />
         </Route>
       </Router>
     )

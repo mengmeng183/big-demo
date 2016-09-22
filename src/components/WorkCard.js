@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router';
 
 class WorkCard extends React.Component {
+  bandleClick(){
+    this.context.router.goBack()
+  }
   render () {
+    let address = `/workinfo/${this.props.url}`
     return(
       <div className="col-sm-6 col-md-4">
         <div className="thumbnail">
@@ -10,9 +15,8 @@ class WorkCard extends React.Component {
             <h3>{this.props.title}</h3>
             <p>{this.props.desc}</p>
             <p>
-              <a to='/about' className="btn btn-primary" role="button" style={{marginRight:'10px'}}>查看详情</a>
-              <a href="#" className="btn btn-default" role="button">返回</a>
-
+              <Link to={address} className="btn btn-primary" role="button" style={{marginRight:'10px'}}>查看详情</Link>
+              <a href="#" className="btn btn-default" role="button" onClick={this.bandleClick.bind(this)}>返回</a>
               </p>
           </div>
         </div>
@@ -20,5 +24,7 @@ class WorkCard extends React.Component {
     )
   }
 }
-
+WorkCard.contextTypes={
+  router:React.PropTypes.object.isRequired
+}
 export default WorkCard;

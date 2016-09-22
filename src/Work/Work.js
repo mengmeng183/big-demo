@@ -24,13 +24,14 @@ class Work extends React.Component {
       loading:{
         color:'#388E3C',
         fontSize:'28px',
-        textAlign:'center'
+        textAlign:'center',
+        height:'100vh',
+        lineHeight:'100vh'
       }
     }
     return(
       <div className='row'>
-        {this.state.wait ? <p style={styles.loading}>loading...</p> : this.state.data.map( (item,index) =>
-          <WorkCard {...item} key={index} />)}
+        {this.state.wait ? <p style={styles.loading}>loading...</p> : this.state.data.map( (item,index) => <WorkCard {...item} key={index} />)}
       </div>
     )
   }

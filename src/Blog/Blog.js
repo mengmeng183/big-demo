@@ -20,9 +20,18 @@ class Blog extends React.Component {
     })
   }
   render () {
+    let styles={
+      loading:{
+        color:'#388E3C',
+        fontSize:'28px',
+        textAlign:'center',
+        height:'100vh',
+        lineHeight:'100vh'
+      }
+    }
     return(
       <div style={{width:'100%'}}>
-        {this.state.wait ? 'loading...' : this.state.data.map( (item,index) => <BlogCard {...item} key={index} index={index}/> )}
+        {this.state.wait ? <p style={styles.loading}>loading...</p> : this.state.data.map( (item,index) => <BlogCard {...item} key={index} index={index}/> )}
       </div>
     )
   }

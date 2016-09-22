@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function getWorkCard(){
-  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/WorkCard.json`
+  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/WorkCard.json?${Math.random()}`
   return axios.get(address)
     .then((res) => (
       { getData:res.data }
@@ -12,7 +12,7 @@ function getWorkCard(){
 }
 
 function getBlogCard(){
-  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/BlogCard.json`
+  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/BlogCard.json?${Math.random()}`
   return axios.get(address)
     .then((res) => (
       { getData:res.data }
@@ -21,4 +21,27 @@ function getBlogCard(){
       alert(error);
     });
 }
-export {getWorkCard,getBlogCard};
+
+function getBlogMd(add){
+  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/Blog/${add}.md`
+  return axios.get(address)
+    .then((res) => (
+      { getData:res.data }
+    ))
+    .catch(function (error) {
+      alert(error);
+    });
+}
+
+function getWorkMd(add){
+  let address = `https://raw.githubusercontent.com/mengmeng183/demodata/master/Work/${add}.md`
+  return axios.get(address)
+    .then((res) => (
+      { getData:res.data }
+    ))
+    .catch(function (error) {
+      alert(error);
+    });
+}
+
+export {getWorkCard,getBlogCard,getBlogMd,getWorkMd};
