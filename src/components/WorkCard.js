@@ -17,7 +17,7 @@ class WorkCard extends React.Component {
             <p>
               <Link to={address} className="btn btn-primary" role="button" style={{marginRight:'10px'}}>查看详情</Link>
               <a href="#" className="btn btn-default" role="button" onClick={this.bandleClick.bind(this)}>返回</a>
-              </p>
+            </p>
           </div>
         </div>
       </div>
