@@ -2,8 +2,12 @@ import React from 'react';
 import NavHeader from './components/NavHeader';
 import NavFooter from './components/NavFooter';
 import NavLeft from './components/NavLeft';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 class App extends React.Component {
+  getChildContext() {
+    return {muiTheme: getMuiTheme()};
+  }
   constructor(){
     super();
     this.state={
@@ -47,4 +51,7 @@ class App extends React.Component {
 App.contextTypes={
   router:React.PropTypes.object.isRequired
 }
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
+};
 export default App;

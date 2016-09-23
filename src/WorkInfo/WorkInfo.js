@@ -43,5 +43,4 @@ marked.setOptions({
     return hljs.highlightAuto(code).value;
   }
 });
-
 export default WorkInfo;
