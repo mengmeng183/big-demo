@@ -6,7 +6,7 @@ class WorkCard extends React.Component {
     this.context.router.goBack()
   }
   render () {
-    let address = `/workinfo/${this.props.url}`
+    let address = `/components/${this.props.url}`
     return(
       <div className="col-sm-6 col-md-4">
         <div className="thumbnail">

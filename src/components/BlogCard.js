@@ -46,7 +46,7 @@ class BlogCard extends React.Component {
         textDecoration:'none',
       }
     }
-    let address=`bloginfo/${this.props.url}`
+    let address=`components/${this.props.url}`
     return(
       <div style={styles.root}>
         <div style={styles.indexBox}>

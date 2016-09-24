@@ -2,12 +2,12 @@ import React from 'react';
 import {Router,Route,hashHistory,IndexRoute} from 'react-router';
 
 import App from './App.js';
-import Home from './Home/Home';
-import Blog from './Blog/Blog';
-import Work from './Work/Work';
-import About from './About/About';
-import BlogInfo from './BlogInfo/BlogInfo';
-import WorkInfo from './WorkInfo/WorkInfo';
+import Home from './containers/Home';
+import Blog from './containers/Blog';
+import Work from './containers/Work';
+import About from './containers/About';
+import BlogInfo from './components/BlogInfo';
+import WorkInfo from './components/WorkInfo';
 
 class Routes extends React.Component {
   render () {
