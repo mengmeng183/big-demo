@@ -13,7 +13,6 @@ class WorkCard extends React.Component {
           <img src={this.props.img} />
           <div className="caption">
             <h3>{this.props.title}</h3>
-            <p>{this.props.desc}</p>
             <p>
               <Link to={address} className="btn btn-primary" role="button" style={{marginRight:'10px'}}>查看详情</Link>
               <a href="#" className="btn btn-default" role="button" onClick={this.bandleClick.bind(this)}>返回</a>

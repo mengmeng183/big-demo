@@ -33,7 +33,7 @@ class BlogInfo extends React.Component {
     }
     let content = marked(this.state.data)
     return(
-      <div>
+      <div className='post-content'>
         {this.state.wait ? <p style={styles.loading}>loading...</p> : <div dangerouslySetInnerHTML={{__html:content}} />}
       </div>
     )
