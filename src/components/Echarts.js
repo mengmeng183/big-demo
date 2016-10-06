@@ -10,7 +10,7 @@ class Echarts extends React.Component {
         text:'我的技能展示',
         left:'center',
         target:'blank',
-        link:'http:liyuex.github.io/big-demo',
+        link:'http://mengmeng183.github.io/big-demo',
         textStyle:{
           color:'#2196F3'
         }
@@ -52,7 +52,7 @@ class Echarts extends React.Component {
           name:'技能熟练度',
           type:'bar',
           barWidth: '60%',
-          data:[96, 98, 88, 90, 80, 70, 50]
+          data:[96, 98, 88, 85, 90, 70, 50]
         }
       ]
     }
